@@ -358,7 +358,7 @@ def app():
             video_empty = st.empty()
 
         data = st.file_uploader(
-            "Upload a GeoJSON file to use as an ROI. Customize timelapse parameters and then click the Submit button 😇👇",
+            "Upload sebuah file GeoJSON yang akan digunakan sebagai area kajian. Atur parameter timelapse dan kemudian tekan tombol Submit 😇👇",
             type=["geojson", "kml", "zip"],
         )
 
@@ -718,7 +718,7 @@ def app():
                             "Steps to create a timelapse: Draw a rectangle on the map -> Export it as a GeoJSON -> Upload it back to the app -> Click the Submit button. Alternatively, you can select a sample ROI from the dropdown list."
                         )
                     else:
-                        empty_text.text("Computing... Please wait...")
+                        empty_text.text("Mengolah data citra... Mohon tunggu...")
 
                         geemap.goes_timelapse(
                             out_gif,

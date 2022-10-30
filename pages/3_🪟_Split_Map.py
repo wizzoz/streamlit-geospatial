@@ -6,16 +6,17 @@ st.set_page_config(layout="wide")
 st.sidebar.title("About")
 st.sidebar.info(
     """
-    Web App URL: <https://geospatial.streamlitapp.com>
-    GitHub repository: <https://github.com/giswqs/streamlit-geospatial>
+    Aplikasi ini merupakan bagian dari Hibah Penelitian Dasar Fakultas Ilmu Sosial Universitas Negeri Jakarta dengan nomor 386/UN39/HK.02/2022 
     """
 )
 
 st.sidebar.title("Contact")
 st.sidebar.info(
     """
-    Qiusheng Wu: <https://wetlands.io>
-    [GitHub](https://github.com/giswqs) | [Twitter](https://twitter.com/giswqs) | [YouTube](https://www.youtube.com/c/QiushengWu) | [LinkedIn](https://www.linkedin.com/in/qiushengwu)
+    Dibuat oleh [Fauzi R A'rachman](https://www.linkedin.com/in/fauzi-ramadhoan/)
+
+    Credit:
+    [Qiusheng Wu](https://www.linkedin.com/in/qiushengwu)
     """
 )
 

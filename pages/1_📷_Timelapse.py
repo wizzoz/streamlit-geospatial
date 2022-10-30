@@ -23,16 +23,17 @@ def ee_authenticate(token_name="EARTHENGINE_TOKEN"):
 st.sidebar.title("About")
 st.sidebar.info(
     """
-    Web App URL: <https://geospatial.streamlitapp.com>
-    GitHub repository: <https://github.com/giswqs/streamlit-geospatial>
+    Aplikasi ini merupakan bagian dari Hibah Penelitian Dasar Fakultas Ilmu Sosial Universitas Negeri Jakarta dengan nomor 386/UN39/HK.02/2022 
     """
 )
 
 st.sidebar.title("Contact")
 st.sidebar.info(
     """
-    Qiusheng Wu: <https://wetlands.io>
-    [GitHub](https://github.com/giswqs) | [Twitter](https://twitter.com/giswqs) | [YouTube](https://www.youtube.com/c/QiushengWu) | [LinkedIn](https://www.linkedin.com/in/qiushengwu)
+    Dibuat oleh [Fauzi R A'rachman](https://www.linkedin.com/in/fauzi-ramadhoan/)
+
+    Credit:
+    [Qiusheng Wu](https://www.linkedin.com/in/qiushengwu)
     """
 )
 
@@ -233,12 +234,12 @@ def app():
 
     today = date.today()
 
-    st.title("Create Satellite Timelapse")
+    st.title("Membuat Timelapse Citra Satelit")
 
     st.markdown(
         """
-        An interactive web app for creating [Landsat](https://developers.google.com/earth-engine/datasets/catalog/landsat)/[GOES](https://jstnbraaten.medium.com/goes-in-earth-engine-53fbc8783c16) timelapse for any location around the globe. 
-        The app was built using [streamlit](https://streamlit.io), [geemap](https://geemap.org), and [Google Earth Engine](https://earthengine.google.com). For more info, check out my streamlit [blog post](https://blog.streamlit.io/creating-satellite-timelapse-with-streamlit-and-earth-engine). 
+        Ini adalah web app interaktif dalam mengolah citra [Landsat](https://developers.google.com/earth-engine/datasets/catalog/landsat)/[GOES](https://jstnbraaten.medium.com/goes-in-earth-engine-53fbc8783c16) dan membuat timelapse dari berbagai lokasi di seluruh dunia. 
+        Aplikasi ini dibangun menggunakan [streamlit](https://streamlit.io), [geemap](https://geemap.org), and [Google Earth Engine](https://earthengine.google.com). Infromasi lebih lanjut dapat melihat halaman [blog ini](https://blog.streamlit.io/creating-satellite-timelapse-with-streamlit-and-earth-engine). 
     """
     )
 
@@ -265,12 +266,12 @@ def app():
 
     with row1_col2:
 
-        keyword = st.text_input("Search for a location:", "")
+        keyword = st.text_input("Cari lokasi di peta:", "")
         if keyword:
             locations = geemap.geocode(keyword)
             if locations is not None and len(locations) > 0:
                 str_locations = [str(g)[1:-1] for g in locations]
-                location = st.selectbox("Select a location:", str_locations)
+                location = st.selectbox("Pilih lokasi:", str_locations)
                 loc_index = str_locations.index(location)
                 selected_loc = locations[loc_index]
                 lat, lng = selected_loc.lat, selected_loc.lng
@@ -279,7 +280,7 @@ def app():
                 st.session_state["zoom_level"] = 12
 
         collection = st.selectbox(
-            "Select a satellite image collection: ",
+            "Koleksi rekaman citra satelit: ",
             [
                 "Any Earth Engine ImageCollection",
                 "Landsat TM-ETM-OLI Surface Reflectance",
@@ -551,7 +552,7 @@ def app():
     with row1_col1:
 
         with st.expander(
-            "Steps: Draw a rectangle on the map -> Export it as a GeoJSON -> Upload it back to the app -> Click the Submit button. Expand this tab to see a demo 👉"
+            "Langkah: Gambar kotak area yang ingin dianalisa pada peta -> Export menjadi file GeoJSON -> Upload kembali file GeoJSON -> Klik tombol submit. Klik tab ini untuk melihat demo 👉"
         ):
             video_empty = st.empty()
 

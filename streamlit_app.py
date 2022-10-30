@@ -3,7 +3,7 @@ import leafmap.foliumap as leafmap
 
 st.set_page_config(layout="wide")
 
-st.sidebar.title("About")
+st.sidebar.title("Tentang")
 st.sidebar.info(
     """
     Web App URL: <https://geospatial.streamlitapp.com>

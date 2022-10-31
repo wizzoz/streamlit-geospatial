@@ -29,15 +29,31 @@ st.markdown(
     """
 )
 
-st.header("Fitur")
+#st.header("Fitur")
 
-markdown = """
-1. Timelapse Citra Satelit
-2. Pemetaan Tutupan Lahan
-"""
+#markdown = """
+#1. Timelapse Citra Satelit
+#2. Pemetaan Tutupan Lahan
+#"""
 
-st.markdown(markdown)
+#st.markdown(markdown)
 
 #m = leafmap.Map(minimap_control=True)
 #m.add_basemap("OpenTopoMap")
 #m.to_streamlit(height=500)
+
+st.subheader("Timelapse dari Citra Satelit")
+st.markdown(
+    """
+    Animasi berikut dibuat menggunakan fitur Timelapse. Klik `Timelapse` pada menu sidebar di sebelah kiri untuk membuat timelapse citra satelit dari area mana saja diseluruh dunia.
+"""
+)
+
+row1_col1, row1_col2 = st.columns(2)
+with row1_col1:
+    st.image("https://github.com/giswqs/data/raw/main/timelapse/spain.gif")
+    st.image("https://github.com/giswqs/data/raw/main/timelapse/las_vegas.gif")
+
+with row1_col2:
+    st.image("https://github.com/giswqs/data/raw/main/timelapse/goes.gif")
+    st.image("https://github.com/giswqs/data/raw/main/timelapse/fire.gif")

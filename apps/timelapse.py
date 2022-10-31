@@ -528,7 +528,7 @@ def app():
                         )
                     else:
 
-                        empty_text.text("Computing... Please wait...")
+                        empty_text.text("Mengolah Citra... Mohon mengunggu...")
 
                         start_year = years[0]
                         end_year = years[1]
@@ -847,7 +847,7 @@ def app():
                         )
                     else:
 
-                        empty_text.text("Computing... Please wait...")
+                        empty_text.text("Mengolah Citra... Mohon mengunggu...")
 
                         geemap.modis_ndvi_timelapse(
                             out_gif,
@@ -959,7 +959,7 @@ def app():
                         )
                     else:
 
-                        empty_text.text("Computing... Please wait...")
+                        empty_text.text("Mengolah Citra... Mohon mengunggu...")
                         try:
                             geemap.create_timelapse(
                                 st.session_state.get("ee_asset_id"),
@@ -1087,7 +1087,7 @@ def app():
                         )
                     else:
 
-                        empty_text.text("Computing... Please wait...")
+                        empty_text.text("Mengolah Citra... Mohon mengunggu...")
                         try:
                             if (
                                 collection
@@ -1255,7 +1255,7 @@ def app():
                         )
                     else:
 
-                        empty_text.text("Computing... Please wait...")
+                        empty_text.text("Mengolah Citra... Mohon mengunggu...")
                         try:
                             geemap.naip_timelapse(
                                 roi,
